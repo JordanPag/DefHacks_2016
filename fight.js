@@ -1,4 +1,4 @@
-var yourHealth = 100;
+var yourHealth = 150;
 var opponentHealth = 10;
 var opponent = 1;
 var money = 0;
@@ -10,34 +10,65 @@ function displayHealth() {
 function heal() {
 	var plus = Math.floor((Math.random() * 10) + 1);
 	yourHealth += plus;
-	if(yourHealth>200){
+	if(yourHealth>300){
 		alert("Your health cannot go any higher!");
-		yourHealth = 200;
+		yourHealth = 300;
+	}
+	var attack = Math.floor((Math.random() * 2) + 1);
+	if (attack==1){
+		var foo = Math.floor((Math.random() * 10) + 1);
+		yourHealth -= foo;
+		if (yourHealth<=0){
+			alert("You lose! Play again?");
+			location.reload();
+		}
+	} else {
+		var bar = Math.floor((Math.random() * 10) + 1);
+		opponentHealth += bar;
+		if (opponentHealth>400){
+			opponentHealth = 400;
+		}
 	}
 	displayHealth();
 }
 
 function attack() {
-	document.getElementById("you").style.left = "150px";
-	setTimeout(function(){
-		var atc = Math.floor((Math.random() * 10) + 1);
-		opponentHealth -= atc;
-		if(opponentHealth<=0){
-			opponentHealth = 0;
-			displayHealth();
-			alert("You've won this time...");
-			next();
-		}
+	var atc = Math.floor((Math.random() * 10) + 1);
+	opponentHealth -= atc;
+	if(opponentHealth<=0){
+		opponentHealth = 0;
 		displayHealth();
-	})
+		alert("You've won this time...");
+		next();
+	}
+	var attack = Math.floor((Math.random() * 2) + 1);
+	if (attack==1){
+		var foo = Math.floor((Math.random() * 10) + 1);
+		yourHealth -= foo;
+		if (yourHealth<=0){
+			alert("You lose! Play again?");
+			location.reload();
+		}
+	} else {
+		var bar = Math.floor((Math.random() * 10) + 1);
+		opponentHealth += bar;
+		if (opponentHealth>400){
+			opponentHealth = 400;
+		}
+	}
+	displayHealth();
 }
 
 function next() {
 	money += 100*opponent;
 	alert("You got "+100*opponent+" coins!");
-	$("#something").html("<button class='button1' onclick='fight();'>Next Battle</button>");
-	opponent ++;
-	console.log(opponent);
+	if (opponent = 3){
+
+	} else {
+		$("#something").html("<button class='button1' onclick='fight();'>Next Battle</button>");
+		opponent ++;
+		console.log(opponent);
+	}
 }
 
 function fight() {
