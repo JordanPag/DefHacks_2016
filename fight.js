@@ -19,7 +19,7 @@ function heal() {
 
 function attack() {
 	document.getElementById("you").style.left = "150px";
-	/*setTimeout(function(){
+	setTimeout(function(){
 		var atc = Math.floor((Math.random() * 10) + 1);
 		opponentHealth -= atc;
 		if(opponentHealth<=0){
@@ -29,7 +29,7 @@ function attack() {
 			next();
 		}
 		displayHealth();
-	})*/
+	})
 }
 
 function next() {
@@ -42,12 +42,12 @@ function next() {
 
 function fight() {
 	if (opponent == 2) {
-		document.getElementById("enemy").setAttribute("src", "http://technetics.com/img/interactive-illustrations/f18_960x640.png");
+		document.getElementById("enemy").setAttribute("src", "http://www.clipartkid.com/images/646/free-blue-fighter-plane-clip-art-CccbiQ-clipart.png");
 		opponentHealth = 100;
 		displayHealth();
 		console.log(opponent);
 	} else if(opponent == 3){
-		document.getElementById("enemy").setAttribute("src", "http://vignette1.wikia.nocookie.net/commando2/images/7/7b/Tank_Commando_2_Shape_3307.png/revision/latest?cb=20130320065142");
+		document.getElementById("enemy").setAttribute("src", "https://vignette1.wikia.nocookie.net/commando2/images/7/7b/Tank_Commando_2_Shape_3307.png/revision/latest?cb=20130320065142");
 		opponentHealth = 300;
 		displayHealth();
 	}
