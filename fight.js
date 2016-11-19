@@ -80,7 +80,8 @@ function next() {
 	money += 100*opponent;
 	alert("You got "+100*opponent+" coins!");
 	if (opponent == 3){
-
+		alert("You win!");
+		window.location.href = 'levels.html';
 	} else {
 		$("#something").html("<button class='button1' onclick='fight();'>Next Battle</button>");
 		opponent ++;
