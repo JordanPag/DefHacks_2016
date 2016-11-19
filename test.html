@@ -1,0 +1,22 @@
+
+<style>
+#dagger {
+  /* important to have a serif font for the dagger
+  sans-serif will look like a cross
+  see: http://en.wikipedia.org/wiki/File:Daggers.svg */
+  font-family: "Old English Text MT", "Times New Roman", Times;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    /* thank YOU Microsoft for having a totally succinct & rationale syntax
+    oh yeah & 2 = 180º here. But you already knew that because it's so obvious, right? */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  transform: rotate(180deg);
+  /* polyfill for rotation is probably overkill
+  the fallback is users just get an upside down dagger, no biggie */
+}
+</style>
+
+<!-- "dagger" entity: http://htmlhelp.com/reference/html40/entities/special.html -->
+<span id="dagger">&dagger;</span>
