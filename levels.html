@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+    </style>
+    <script src= "https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+    <script src= "fight.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function functionName() {
+        Crafty.init();
+        var player = Crafty.e("2D, DOM, Color, Collision, Solid, Fourway, Player")
+        player.attr({x:20, y: 20, h:50, w:50});
+        player.color("Blue");
+        player.fourway(400);
+
+        var e1 = Crafty.e("2D, DOM, Color, Collision, Solid")
+        e1.attr({x:500, y: 400, h:50, w:50});
+        e1.color("Red")
+        e1.onHit("Player", fight)
+
+        var e2 = Crafty.e("2D, DOM, Color, Collision, Solid")
+        e2.attr({x:700, y: 50, h:50, w:50});
+        e2.color("Red")
+        e2.onHit("Player", fight2)
+      }
+
+      functionName();
+    </script>
+
+  </body>
+</html>
