@@ -4,15 +4,17 @@
 		<meta charset="utf-8">
 		<script src="fight.js"></script>
 		<link rel="stylesheet" type="text/css" href="fancybuttons.css">
+		<link rel="stylesheet" type="text/css" href="fight.css">
 		<title>Fight!</title>
 		<link rel="icon" type="image/ico" href="https://s-media-cache-ak0.pinimg.com/favicons/d6517406e8a0c6fd298bfad8fb1c05bc64dddf438db7619579a88299.png?8dc1145ac0190d12e50aa29ef5e87259">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
 	</head>
-	<body style="background:#ff0000;">
+	<body style="background:#ff0000;" onkeypress="displayunicode(event); this.select();">
 		<p> &nbsp;&nbsp;&nbsp;&nbsp;<h2><b>You &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your Opponent</b></h2></p>
 		<img id="you" src="http://silhouettesfree.com/video-games/street-fighter/ken-silhouette-image-2.png"></img>
 		<img id="enemy" src="https://orig03.deviantart.net/bb93/f/2013/339/c/6/dragon_brawler_by_mephilesae-d6wwea1.png" height="300"></img>
 		<p id="healths"> &nbsp;&nbsp;&nbsp;&nbsp;<b>Health: 150 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Health: 10</b></p>
-		<div id="something"><button class="button1" onclick="attack();">Attack</button><button class="button1" onclick="heal();">Heal</button></div>
+		<div id="something"><button class="button1" onclick="attack();">Attack (a)</button>&nbsp;&nbsp;&nbsp;<button class="button1" onclick="heal();">Heal (h)</button></div>
 	<body>
 </html>

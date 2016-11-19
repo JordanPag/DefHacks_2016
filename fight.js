@@ -2,6 +2,22 @@ var yourHealth = 150;
 var opponentHealth = 10;
 var opponent = 1;
 var money = 0;
+var yes = "no";
+
+function displayunicode(e){
+	var unicode=e.keyCode? e.keyCode : e.charCode;
+	alert(unicode);
+	if (unicode == 65){
+		if (yes=="no"){
+			attack();
+		}
+	}
+	if (unicode == 72){
+		if(yes=="no"){
+			heal();
+		}
+	}
+}
 
 function displayHealth() {
 	$("p#healths").html(" &nbsp;&nbsp;&nbsp;&nbsp;<b>Health: "+yourHealth+" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Health: "+opponentHealth+"</b>");
@@ -60,9 +76,10 @@ function attack() {
 }
 
 function next() {
+	yes = "yes";
 	money += 100*opponent;
 	alert("You got "+100*opponent+" coins!");
-	if (opponent = 3){
+	if (opponent == 3){
 
 	} else {
 		$("#something").html("<button class='button1' onclick='fight();'>Next Battle</button>");
