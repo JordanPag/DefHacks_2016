@@ -1,3 +1,3 @@
 # DefHacks 2016
 
-Our project has multiple games with different levels.
+Our project is a game with different levels.
