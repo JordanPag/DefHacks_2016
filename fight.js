@@ -23,7 +23,7 @@ function displayHealth() {
 }
 
 function heal() {
-	var plus = Math.floor((Math.random() * 10) + 1 + armour);
+	var plus = Math.floor((Math.random() * 10) + 1);
 	yourHealth += plus;
 	if(yourHealth>300){
 		alert("Your health cannot go any higher!");
