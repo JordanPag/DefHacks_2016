@@ -40,8 +40,8 @@ function heal() {
 	} else {
 		var bar = Math.floor((Math.random() * 10) + 1);
 		opponentHealth += bar;
-		if (opponentHealth>400){
-			opponentHealth = 400;
+		if (opponentHealth>350){
+			opponentHealth = 350;
 		}
 	}
 	displayHealth();
