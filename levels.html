@@ -25,13 +25,24 @@
         e2.color("Red")
         e2.onHit("Player", fight2)
       }
-
+      var v= 0
       functionName();
       function fight() {
-        window.location.href = 'fight.html';
+        
+        if (v= 0){
+          window.location.href = 'fight.html';
+          v++;
+          e1.destroy();
+        }
       }
       function fight2() {
-        window.location.href = 'fight2.html';
+        
+        if (i= 0){
+          window.location.href = 'fight2.html';
+          i++;
+          e2.destroy();
+        }
+        
       }
     </script>
 
