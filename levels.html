@@ -3,7 +3,7 @@
   <head>
     <script src= "https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
   </head>
-  <body>
+  <body id="body">
     <p style="position: relative; left: 500px; top: 440px; font-family: arial;">Lvl 1</p>
     <p style="position: relative; left: 700px; top: 50px; font-family: arial;">Lvl 2</p>
     <script type="text/javascript">
@@ -24,8 +24,8 @@
         e2.color("Red")
         e2.onHit("Player", fight2)
         
-        document.getElementByTagName("body").append("<img style='width: 50; position: fixed; left: 500; top: 400;'src='http://orig08.deviantart.net/a055/f/2015/072/c/6/dark_portal_gif_by_starwolf597_d352ufd_by_shadicstudios-d8li0ob.gif'></img>");
-        document.getElementByTagName("body").append("<img style='width: 50; position: fixed; left: 700; top: 50;'src='http://orig08.deviantart.net/a055/f/2015/072/c/6/dark_portal_gif_by_starwolf597_d352ufd_by_shadicstudios-d8li0ob.gif'></img>");
+        document.getElementById("body").append("<img style='width: 50; position: fixed; left: 500; top: 400;'src='http://orig08.deviantart.net/a055/f/2015/072/c/6/dark_portal_gif_by_starwolf597_d352ufd_by_shadicstudios-d8li0ob.gif'></img>");
+        document.getElementById("body").append("<img style='width: 50; position: fixed; left: 700; top: 50;'src='http://orig08.deviantart.net/a055/f/2015/072/c/6/dark_portal_gif_by_starwolf597_d352ufd_by_shadicstudios-d8li0ob.gif'></img>");
       }
       var v= 0
       functionName();
