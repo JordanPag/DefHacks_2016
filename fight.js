@@ -6,13 +6,12 @@ var yes = "no";
 
 function displayunicode(e){
 	var unicode=e.keyCode? e.keyCode : e.charCode;
-	alert(unicode);
-	if (unicode == 65){
+	if (unicode == 65|| unicode == 97){
 		if (yes=="no"){
 			attack();
 		}
 	}
-	if (unicode == 72){
+	if (unicode == 72|| unicode == 107){
 		if(yes=="no"){
 			heal();
 		}
@@ -24,7 +23,7 @@ function displayHealth() {
 }
 
 function heal() {
-	var plus = Math.floor((Math.random() * 10) + 1);
+	var plus = Math.floor((Math.random() * 10) + 1 + armour);
 	yourHealth += plus;
 	if(yourHealth>300){
 		alert("Your health cannot go any higher!");
@@ -68,8 +67,8 @@ function attack() {
 	} else {
 		var bar = Math.floor((Math.random() * 10) + 1);
 		opponentHealth += bar;
-		if (opponentHealth>400){
-			opponentHealth = 400;
+		if (opponentHealth>350){
+			opponentHealth = 350;
 		}
 	}
 	displayHealth();
@@ -100,5 +99,6 @@ function fight() {
 		opponentHealth = 300;
 		displayHealth();
 	}
-	$("div#something").html("<button class='button1' onclick='attack();''>Attack</button><button class='button1' onclick='heal();''>Heal</button>");
+	$("div#something").html("<button class='button1' onclick='attack();''>Attack (a)</button><button class='button1' onclick='heal();''>Heal (h)</button>");
+	yes = "no";
 }
